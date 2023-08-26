@@ -1,0 +1,193 @@
+{
+    "Host": {
+        "sync": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "name",
+                        "subdomain",
+                        "domain",
+                        "extension",
+                        "url",
+
+                        "#class"
+                    ],
+                    "objects": {
+                        "url": {
+                            "multiple": false,
+                            "expose": [
+                                "development",
+                                "staging",
+                                "production"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "list": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "name",
+                        "subdomain",
+                        "domain",
+                        "extension",
+                        "url",
+
+                        "#class"
+                    ],
+                    "objects": {
+                        "url": {
+                            "multiple": false,
+                            "expose": [
+                                "development",
+                                "staging",
+                                "production"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "read": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "name",
+                        "subdomain",
+                        "domain",
+                        "extension",
+                        "url",
+
+                        "#class"
+                    ],
+                    "objects": {
+                        "url": {
+                            "multiple": false,
+                            "expose": [
+                                "development",
+                                "staging",
+                                "production"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "record": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "name",
+                        "subdomain",
+                        "domain",
+                        "extension",
+                        "url",
+
+                        "#class"
+                    ],
+                    "objects": {
+                        "url": {
+                            "multiple": false,
+                            "expose": [
+                                "development",
+                                "staging",
+                                "production"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "create": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "name",
+                        "subdomain",
+                        "domain",
+                        "extension",
+                        "url",
+
+                        "#class"
+                    ],
+                    "objects": {
+                        "url": {
+                            "multiple": false,
+                            "expose": [
+                                "development",
+                                "staging",
+                                "production"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "put": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "name",
+                        "subdomain",
+                        "domain",
+                        "extension",
+                        "url",
+
+                        "#class"
+                    ],
+                    "objects": {
+                        "url": {
+                            "multiple": false,
+                            "expose": [
+                                "development",
+                                "staging",
+                                "production"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "patch": {
+            "expose": [
+                {
+                    "role": "ROLE_SYSTEM",
+                    "attributes": [
+                        "uuid",
+                        "name",
+                        "subdomain",
+                        "domain",
+                        "extension",
+                        "url",
+
+                        "#class"
+                    ],
+                    "objects": {
+                        "url": {
+                            "multiple": false,
+                            "expose": [
+                                "development",
+                                "staging",
+                                "production"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

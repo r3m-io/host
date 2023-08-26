@@ -1,0 +1,18 @@
+{
+  "name" : "r3m_io/host",
+  "description" : "r3m_io/host see https://r3m.io for detailed usage",
+  "type" : "package",
+  "keywords" : ["node", "r3m", "keyboard", "package", "framework", "r3m.io"],
+  "homepage": "https://r3m.io",
+  "require" : {
+    "ext-posix": "*",
+    "ext-zlib": "*",
+    "ext-iconv": "*",
+    "r3m_io/framework": "*"
+  },
+  "license" : "MIT",
+  "authors" : [{
+    "name" : "Remco van der Velde",
+    "email" : "development@universeorange.com"
+  }]
+}

@@ -1,0 +1,181 @@
+{
+    "Host": {
+        "create": {
+            "validate": {
+                "uuid" : [
+                    {
+                        "is.uuid": true
+                    }
+                ],
+                "name": [
+                    {
+                        "is.unique": {
+                            "class": "App.Host",
+                            "url": "{{config('project.dir.data')}}Node/BinaryTree/App.Host/Asc/Name.btree",
+                            "attribute": [
+                                "name"
+                            ]
+                        }
+                    }
+                ],
+                "?subdomain" : [
+                    {
+                        "string.length": ">=1"
+                    },
+                    {
+                        "string.length": "<=63"
+                    }
+                ],
+                "domain" : [
+                    {
+                        "string.length": ">=1"
+                    },
+                    {
+                        "string.length": "<=63"
+                    }
+                ],
+                "extension" : [
+                    {
+                        "string.length": ">=1"
+                    },
+                    {
+                        "string.length": "<=63"
+                    }
+                ],
+                "url.development" : [
+                    {
+                        "string.length": ">=3"
+                    }
+                ],
+                "url.staging" : [
+                    {
+                        "string.length": ">=3"
+                    }
+                ],
+                "url.production" : [
+                    {
+                        "string.length": ">=3"
+                    }
+                ]
+            }
+        },
+        "put": {
+            "validate": {
+                "uuid" : [
+                    {
+                        "is.uuid": true
+                    }
+                ],
+                "name": [
+                    {
+                        "is.unique": {
+                            "class": "App.Host",
+                            "url": "{{config('project.dir.data')}}Node/BinaryTree/App.Host/Asc/Name.btree",
+                            "attribute": [
+                                "name"
+                            ]
+                        }
+                    }
+                ],
+                "?subdomain" : [
+                    {
+                        "string.length": ">=1"
+                    },
+                    {
+                        "string.length": "<=63"
+                    }
+                ],
+                "domain" : [
+                    {
+                        "string.length": ">=1"
+                    },
+                    {
+                        "string.length": "<=63"
+                    }
+                ],
+                "extension" : [
+                    {
+                        "string.length": ">=1"
+                    },
+                    {
+                        "string.length": "<=63"
+                    }
+                ],
+                "url.development" : [
+                    {
+                        "string.length": ">=3"
+                    }
+                ],
+                "url.staging" : [
+                    {
+                        "string.length": ">=3"
+                    }
+                ],
+                "url.production" : [
+                    {
+                        "string.length": ">=3"
+                    }
+                ]
+            }
+        },
+        "patch": {
+            "validate": {
+                "uuid" : [
+                    {
+                        "is.uuid": true
+                    }
+                ],
+                "?name": [
+                    {
+                        "is.unique": {
+                            "class": "App.Host",
+                            "url": "{{config('project.dir.data')}}Node/BinaryTree/App.Host/Asc/Name.btree",
+                            "attribute": [
+                                "name"
+                            ]
+                        }
+                    }
+                ],
+                "?subdomain" : [
+                    {
+                        "string.length": ">=1"
+                    },
+                    {
+                        "string.length": "<=63"
+                    }
+                ],
+                "?domain" : [
+                    {
+                        "string.length": ">=1"
+                    },
+                    {
+                        "string.length": "<=63"
+                    }
+                ],
+                "?extension" : [
+                    {
+                        "string.length": ">=1"
+                    },
+                    {
+                        "string.length": "<=63"
+                    }
+                ],
+                "?url.development" : [
+                    {
+                        "string.length": ">=3"
+                    }
+                ],
+                "?url.staging" : [
+                    {
+                        "string.length": ">=3"
+                    }
+                ],
+                "?url.production" : [
+                    {
+                        "string.length": ">=3"
+                    }
+                ]
+            }
+        }
+    }
+}
