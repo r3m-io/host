@@ -1,5 +1,5 @@
 <?php
-namespace Package\R3m\Io\Keyboard\Controller;
+namespace Package\R3m\Io\Host\Controller;
 
 use Exception;
 use R3m\Io\App;
@@ -16,8 +16,8 @@ class Cli extends Controller {
     const DIR = __DIR__ . '/';
     const MODULE_INFO = 'info';
     const INFO = [
-        '{{binary()}} r3m_io/keyboard                | Keyboard (Object store) options',
-        '{{binary()}} r3m_io/keyboard setup          | Keyboard setup'
+        '{{binary()}} r3m_io/host                    | Host (Object store) options',
+        '{{binary()}} r3m_io/host setup              | Host setup'
     ];
 
     /**
@@ -28,7 +28,9 @@ class Cli extends Controller {
         Cli::plugin(
             $object,
             $object->config('project.dir.package') .
-            'R3m_io' .
+            'R3m' .
+            $object->config('ds') .
+            'Io' .
             $object->config('ds') .
             'Node' .
             $object->config('ds') .
@@ -38,7 +40,9 @@ class Cli extends Controller {
         Cli::validator(
             $object,
             $object->config('project.dir.package') .
-            'R3m_io' .
+            'R3m' .
+            $object->config('ds') .
+            'Io' .
             $object->config('ds') .
             'Node' .
             $object->config('ds') .
