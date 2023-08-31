@@ -27,7 +27,7 @@
             "name": "development",
             "type": "string"
           },
-{
+          {
             "name": "staging",
             "type": "string"
           },
