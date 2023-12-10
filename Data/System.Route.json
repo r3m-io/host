@@ -1,0 +1,17 @@
+{
+  "System": {
+    "Route": [
+      {
+        "#class": "System.Route",
+        "name": "r3m-io-cli-host",
+        "path": "r3m_io\/host",
+        "controller": "Package.R3m.Io.Host.Controller.Cli.run",
+        "language": "en",
+        "priority": 1001,
+        "method": [
+          "CLI"
+        ]
+      }
+    ]
+  }
+}
