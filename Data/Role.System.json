@@ -76,6 +76,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "System:Host:property.delete",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "System:Host:list",
       "#class": "Account.Permission"
     },
@@ -157,6 +161,10 @@
     },
     {
       "name": "System:Host:Mapper:page.relation",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "System:Host:Mapper:property.delete",
       "#class": "Account.Permission"
     },
     {
