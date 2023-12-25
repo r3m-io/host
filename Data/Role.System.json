@@ -126,7 +126,7 @@
     {
       "name": "System:Host:Mapper:delete.many",
       "#class": "Account.Permission"
-    },1
+    },
     {
       "name": "System:Host:Mapper:read",
       "#class": "Account.Permission"
