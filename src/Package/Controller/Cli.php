@@ -24,9 +24,9 @@ class Cli extends Controller {
     const INFO = [
         '{{binary()}} r3m_io/host                    | Host options',
         '{{binary()}} r3m_io/host setup              | Host setup',
-        '{{binary()}} r3m_io/host name add           | Host name add',
-        '{{binary()}} r3m_io/host name delete        | Host name delete',
-        '{{binary()}} r3m_io/host name has           | Host name has',
+        '{{binary()}} r3m_io/host name add           | /etc/hosts add',
+        '{{binary()}} r3m_io/host name delete        | /etc/hosts delete',
+        '{{binary()}} r3m_io/host name has           | /etc/hosts has',
     ];
 
     /**
