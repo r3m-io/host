@@ -1,6 +1,8 @@
 <?php
 namespace Package\R3m\Io\Host\Trait;
 
+use R3m\Io\Config;
+
 use R3m\Io\Module\Core;
 use R3m\Io\Module\Event;
 use R3m\Io\Module\File;
