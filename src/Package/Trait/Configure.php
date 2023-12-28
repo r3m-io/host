@@ -3,6 +3,7 @@ namespace Package\R3m\Io\Host\Trait;
 
 use R3m\Io\Config;
 
+use R3m\Io\Exception\FileWriteException;
 use R3m\Io\Module\Core;
 use R3m\Io\Module\Event;
 use R3m\Io\Module\File;
@@ -25,7 +26,7 @@ trait Configure {
         $object = $this->object();
         if($object->config(Config::POSIX_ID) !== 0){
             $exception = new Exception('Only root can configure host add...');
-            Event::trigger($object, 'r3m.io.host.configure.host.add', [
+            Event::trigger($object, 'r3m.io.host.configure.name.add', [
                 'options' => $options,
                 'exception' => $exception
             ]);
@@ -43,7 +44,7 @@ trait Configure {
         }
         if($host === false){
             $exception = new Exception('Host cannot be empty...');
-            Event::trigger($object, 'r3m.io.host.configure.host.add', [
+            Event::trigger($object, 'r3m.io.host.configure.name.add', [
                 'options' => $options,
                 'exception' => $exception
             ]);
@@ -54,7 +55,7 @@ trait Configure {
             $data = explode("\n", File::read($url));
             foreach($data as $nr => $row){
                 if(stristr($row, $host) !== false){
-                    Event::trigger($object, 'r3m.io.host.configure.host.add', [
+                    Event::trigger($object, 'r3m.io.host.configure.name.add', [
                         'options' => $options,
                         'is_found' => true
                     ]);
@@ -64,14 +65,106 @@ trait Configure {
             $data = $ip . "\t" . $host . "\n";
             $append = File::append($url, $data);
             echo 'Ip: ' . $ip  .' Host: ' . $host . ' added.' . "\n";
-            Event::trigger($object, 'r3m.io.host.configure.host.add', [
+            Event::trigger($object, 'r3m.io.host.configure.name.add', [
                 'options' => $options,
                 'is_added' => true
             ]);
         }
     }
 
-    public function name_delete(){
+    /**
+     * @throws ObjectException
+     * @throws FileWriteException
+     * @throws Exception
+     */
+    public function name_has($options=[]): bool
+    {
+        $options = Core::object($options, Core::OBJECT_ARRAY);
+        $object = $this->object();
+        if ($object->config(Config::POSIX_ID) !== 0) {
+            $exception = new Exception('Only root can configure host add...');
+            Event::trigger($object, 'r3m.io.host.configure.name.delete', [
+                'options' => $options,
+                'exception' => $exception
+            ]);
+            throw $exception;
+        }
+        $host = false;
+        if (
+            array_key_exists('host', $options) ||
+            !empty($options['host'])
+        ) {
+            $host = $options['host'];
+        }
+        if($host === false){
+            $exception = new Exception('Host cannot be empty...');
+            Event::trigger($object, 'r3m.io.host.configure.name.host', [
+                'options' => $options,
+                'exception' => $exception
+            ]);
+            throw $exception;
+        }
+        $url = '/etc/hosts';
+        $data = explode("\n", File::read($url));
+        foreach ($data as $nr => $row) {
+            if (stristr($row, $host) !== false) {
+                return true;
+            }
+        }
+        return false;
+    }
 
+    /**
+     * @throws ObjectException
+     * @throws FileWriteException
+     * @throws Exception
+     */
+    public function name_delete($options=[]): void
+    {
+        $options = Core::object($options, Core::OBJECT_ARRAY);
+        $object = $this->object();
+        if($object->config(Config::POSIX_ID) !== 0){
+            $exception = new Exception('Only root can configure host add...');
+            Event::trigger($object, 'r3m.io.host.configure.name.delete', [
+                'options' => $options,
+                'exception' => $exception
+            ]);
+            throw $exception;
+        }
+        $host = false;
+        if(
+            array_key_exists('host', $options) ||
+            !empty($options['host'])
+        ){
+            $host = $options['host'];
+        }
+        if($host === false){
+            $exception = new Exception('Host cannot be empty...');
+            Event::trigger($object, 'r3m.io.host.configure.name.delete', [
+                'options' => $options,
+                'exception' => $exception
+            ]);
+            throw $exception;
+        }
+        $url = '/etc/hosts';
+        $data = explode("\n", File::read($url));
+        $is_delete = false;
+        foreach($data as $nr => $row){
+            if(stristr($row, $host) !== false){
+                unset($data[$nr]);
+                $is_delete = true;
+            }
+        }
+        $data = implode("\n", $data);
+        $bytes = File::write($url, $data);
+        Event::trigger($object, 'cli.configure.host.delete', [
+            'options' => $options,
+            'is_delete' => $is_delete,
+        ]);
+        if($is_delete === true){
+            echo 'hostname deleted...' . PHP_EOL;
+        } else {
+            echo 'hostname not found...' . PHP_EOL;
+        }
     }
 }
