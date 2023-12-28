@@ -1,7 +1,7 @@
 {{R3M}}
 {{$options = options()}}
-{{$has = Package.R3m.Io.Host:Configure:name.has($options)}}
-{{if(!is.empty($has))}}
+{{$name.has = Package.R3m.Io.Host:Configure:name.has($options)}}
+{{if(!is.empty($name.has))}}
 true
 {{else}}
 false
