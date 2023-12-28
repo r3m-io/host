@@ -17,7 +17,7 @@ trait Configure {
      * @throws FileAppendException
      * @throws Exception
      */
-    public function host_name_add($options=[]): void
+    public function name_add($options=[]): void
     {
         $options = Core::object($options, Core::OBJECT_ARRAY);
         $object = $this->object();
@@ -69,7 +69,7 @@ trait Configure {
         }
     }
 
-    public function host_name_delete(){
+    public function name_delete(){
 
     }
 }
