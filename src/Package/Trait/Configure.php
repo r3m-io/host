@@ -162,9 +162,9 @@ trait Configure {
             'is_delete' => $is_delete,
         ]);
         if($is_delete === true){
-            echo 'hostname deleted...' . PHP_EOL;
+            echo 'hostname (' . $host . ') deleted...' . PHP_EOL;
         } else {
-            echo 'hostname not found...' . PHP_EOL;
+            echo 'hostname (' . $host . ') not found...' . PHP_EOL;
         }
     }
 }
