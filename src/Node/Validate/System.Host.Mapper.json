@@ -17,6 +17,14 @@
                                         "source"
                                     ]
                                 }
+                            },
+                            {
+                                "string.length" : ">=1"
+                            }
+                        ],
+                        "destination": [
+                            {
+                                "string.length" : ">=1"
                             }
                         ]
                     }
@@ -36,6 +44,14 @@
                                         "source"
                                     ]
                                 }
+                            },
+                            {
+                                "string.length" : ">=1"
+                            }
+                        ],
+                        "destination": [
+                            {
+                                "string.length" : ">=1"
                             }
                         ]
                     }
@@ -55,6 +71,14 @@
                                         "source"
                                     ]
                                 }
+                            },
+                            {
+                                "string.length" : ">=1"
+                            }
+                        ],
+                        "destination": [
+                            {
+                                "string.length" : ">=1"
                             }
                         ]
                     }
