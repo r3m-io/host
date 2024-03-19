@@ -2,7 +2,7 @@
     "System": {
         "Host": {
             "count": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -18,7 +18,7 @@
                         "object": {
                             "url": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "development",
                                     "staging",
                                     "production",
@@ -28,7 +28,7 @@
                             },
                             "file": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "request"
                                 ]
                             }
@@ -37,7 +37,7 @@
                 ]
             },
             "create": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -53,7 +53,7 @@
                         "object": {
                             "url": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "development",
                                     "staging",
                                     "production",
@@ -63,7 +63,7 @@
                             },
                             "file": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "request"
                                 ]
                             }
@@ -72,7 +72,7 @@
                 ]
             },
             "list": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -88,7 +88,7 @@
                         "object": {
                             "url": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "development",
                                     "staging",
                                     "production",
@@ -98,7 +98,7 @@
                             },
                             "file": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "request"
                                 ]
                             }
@@ -107,7 +107,7 @@
                 ]
             },
             "read": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -123,7 +123,7 @@
                         "object": {
                             "url": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "development",
                                     "staging",
                                     "production",
@@ -133,7 +133,7 @@
                             },
                             "file": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "request"
                                 ]
                             }
@@ -142,7 +142,7 @@
                 ]
             },
             "record": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -158,7 +158,7 @@
                         "object": {
                             "url": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "development",
                                     "staging",
                                     "production",
@@ -168,7 +168,7 @@
                             },
                             "file": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "request"
                                 ]
                             }
@@ -177,7 +177,7 @@
                 ]
             },
             "patch": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -193,7 +193,7 @@
                         "object": {
                             "url": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "development",
                                     "staging",
                                     "production",
@@ -203,7 +203,7 @@
                             },
                             "file": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "request"
                                 ]
                             }
@@ -212,7 +212,7 @@
                 ]
             },
             "put": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -228,7 +228,7 @@
                         "object": {
                             "url": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "development",
                                     "staging",
                                     "production",
@@ -239,7 +239,7 @@
                             },
                             "file": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "request"
                                 ]
                             }
@@ -248,7 +248,7 @@
                 ]
             },
             "page": {
-                "expose": [
+                "output": [
                     {
                         "role": "ROLE_SYSTEM",
                         "property": [
@@ -264,7 +264,7 @@
                         "object": {
                             "url": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "development",
                                     "staging",
                                     "production",
@@ -275,7 +275,7 @@
                             },
                             "file": {
                                 "multiple": false,
-                                "expose": [
+                                "output": [
                                     "request"
                                 ]
                             }
